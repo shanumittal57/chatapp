@@ -1,0 +1,17 @@
+const mysql = require("mysql");
+
+const db = mysql.createConnection({
+    user: "root",
+    host: "localhost",
+    password: "",
+    port:3308,
+    database: "chatapp"
+})
+
+db.connect(function (err) {
+    if (err) throw err;
+});
+
+module.exports = { db }
+
+

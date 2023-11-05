@@ -1,0 +1,1 @@
+export const APP_API_PATH = "http://localhost:5000"
