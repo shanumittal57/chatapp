@@ -45,7 +45,7 @@ export const UserLogin = () => {
             axios.post(APP_API_PATH + '/login', { email, password })
                 .then((success) => {
                     if (success.data.status === 500) {
-                        setErrorHandling('There is an error while LogIn');
+                        setErrorHandling(success.data.message);
                     } else {
                         if (success.data.token) {
                             setErrorHandling(null)
